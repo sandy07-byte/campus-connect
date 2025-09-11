@@ -1,0 +1,7 @@
+.cc-table-wrap { overflow:auto; background:#fff; border:1px solid #e5e7eb; border-radius:12px; }
+.cc-table { width:100%; border-collapse:collapse; }
+.cc-table th, .cc-table td { padding:10px 12px; border-bottom:1px solid #f1f5f9; text-align:left; }
+.cc-table th { background:#f8fafc; font-weight:700; color:#0e1a2b; }
+.cc-table-empty { text-align:center; color:#64748b; padding:16px; }
+
+

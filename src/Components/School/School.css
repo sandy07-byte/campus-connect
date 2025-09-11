@@ -1,0 +1,73 @@
+/* Page scaffolding */
+.school-page { color: #111827; }
+.section { padding-bottom: 56px; }
+.page-hero { width: 100%; height: 240px; background-size: cover; background-position: center; border-radius: 0; }
+
+.container { width: min(1200px, 100%); margin: 0 auto; padding: 0 16px; }
+.center { text-align: center; }
+.btn { background: #fff; border: 1px solid #e5e7eb; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.btn:active { transform: translateY(1px); }
+
+/* Our School */
+.our-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; padding: 24px 0; }
+.our-left h2 { margin: 0 0 8px; font-size: 32px; }
+.our-left blockquote { margin: 0 0 10px; color: #1f2937; font-style: italic; }
+.our-left p { margin: 0; color: #374151; line-height: 1.7; }
+
+.card-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
+.card-row.small { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.info-card { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.04); }
+.info-card .icon { display: grid; place-items: center; background: #f3f4f6; border-radius: 8px; width: 28px; height: 28px; }
+.info-card .label { font-weight: 600; }
+
+.local-footer { display: grid; gap: 8px; padding: 16px 0 0; }
+
+/* Mission & Vision */
+.mv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 24px 0; }
+.mv-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; box-shadow: 0 6px 20px rgba(0,0,0,.04); }
+.mv-card h3 { margin: 0 0 8px; }
+.mv-card p { margin: 0; color: #374151; line-height: 1.7; }
+
+/* Achievements */
+.section-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0; }
+.card-carousel { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+.card-carousel.three-per { grid-auto-columns: calc((100% - 24px) / 3); }
+.ach-card { scroll-snap-align: start; border: 1px solid #e5e7eb; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.04); transition: transform .25s ease, box-shadow .25s ease; }
+.ach-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.08); }
+.ach-card img { width: 100%; height: 160px; object-fit: cover; }
+.ach-body { padding: 12px; }
+.ach-body h4 { margin: 0 0 6px; }
+.ach-body p { margin: 0 0 8px; color: #374151; }
+.ach-student { font-size: 13px; color: #6b7280; }
+
+/* Director Message */
+.dir-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; align-items: center; padding: 24px 0; }
+.dir-left h2 { margin: 0 0 8px; }
+.dir-left p { margin: 0; color: #374151; line-height: 1.7; }
+.dir-photo { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; border: 1px solid #e5e7eb; }
+
+/* Committee */
+.table-wrap { overflow-x: auto; margin: 12px 0 0; }
+.committee { width: 100%; border-collapse: collapse; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; }
+.committee th, .committee td { padding: 10px 12px; border-bottom: 1px solid #e5e7eb; text-align: left; }
+.committee thead { background: #f8fafc; }
+.committee tbody tr:hover { background: #f9fafb; }
+
+/* Footer */
+.page-footer { padding: 24px 0; background: #0b1020; color: #e5e7eb; margin-top: 24px; }
+.footer-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.page-footer .info-card { background: #0f172a; border-color: #1f2937; color: #e5e7eb; }
+
+/* Sticky navbar support (assumes parent navbar is sticky) */
+body { scroll-behavior: smooth; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .our-grid { grid-template-columns: 1fr; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .dir-grid { grid-template-columns: 1fr; }
+  .card-carousel.three-per { grid-auto-columns: calc((100% - 0px) / 1); }
+}
+@media (max-width: 600px) {
+  .card-row, .footer-cards { grid-template-columns: 1fr; }
+}

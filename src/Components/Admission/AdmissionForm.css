@@ -1,0 +1,23 @@
+/* Center the admission form using existing auth modal styles */
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.auth-modal { max-width: 520px; width: 100%; }
+
+/* tweak textarea */
+.auth-field textarea {
+  width: 100%;
+  min-height: 96px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+  outline: none;
+  font-size: 14px;
+}
+.auth-field textarea:focus { border-color: #0056d1; box-shadow: 0 0 0 3px rgba(0,86,209,.15); }
+

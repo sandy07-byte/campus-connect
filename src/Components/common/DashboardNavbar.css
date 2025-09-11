@@ -1,0 +1,11 @@
+.cc-topbar { position: fixed; top:0; left:0; right:0; height:56px; background:#0e1a2b; color:#e8eef7; display:flex; align-items:center; justify-content:space-between; padding:0 16px; z-index: 10; }
+.cc-logo { font-weight:700; letter-spacing:.5px; }
+.cc-welcome { margin-left:12px; opacity:.9; }
+.cc-topbar-left { display:flex; align-items:center; gap: 8px; }
+.cc-topbar-right { display:flex; align-items:center; position:relative; }
+.cc-avatar { width:32px; height:32px; border-radius:50%; border:1px solid #2b3d57; }
+.cc-dropdown { position:absolute; right:0; top:44px; background:#fff; color:#111; border:1px solid #e5e7eb; border-radius:8px; width:180px; box-shadow:0 8px 24px rgba(0,0,0,.12); display:flex; flex-direction:column; }
+.cc-dropdown button { padding:10px 12px; text-align:left; background:#fff; border:none; cursor:pointer; }
+.cc-dropdown button:hover { background:#f3f4f6; }
+
+
