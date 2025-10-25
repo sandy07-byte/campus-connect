@@ -1,0 +1,413 @@
+/* Photo Gallery Page Styles */
+.photo-gallery-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header with Breadcrumbs */
+.gallery-header {
+  background: #f8fafc;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.breadcrumb-separator {
+  color: #9ca3af;
+}
+
+/* Panoramic Banner */
+.panoramic-banner {
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.banner-images {
+  display: flex;
+  width: 100%;
+}
+
+.banner-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.banner-image:hover {
+  transform: scale(1.02);
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.banner-overlay h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.banner-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Main Content */
+.gallery-content {
+  padding: 2rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #10b981;
+}
+
+.search-group input {
+  background: white;
+}
+
+/* Gallery Section Title */
+.gallery-section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.gallery-section-title h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-section-title p {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+  transform: translateY(0);
+}
+
+.overlay-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.overlay-content p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Lightbox Modal */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-nav.prev {
+  left: -3rem;
+}
+
+.lightbox-nav.next {
+  right: -3rem;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-info {
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+.lightbox-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.lightbox-info p {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .filter-bar {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .panoramic-banner {
+    height: 200px;
+  }
+  
+  .banner-overlay h2 {
+    font-size: 1.25rem;
+  }
+  
+  .section-title h1 {
+    font-size: 2rem;
+  }
+  
+  .gallery-section-title {
+    padding: 1rem;
+  }
+  
+  .gallery-section-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-item img {
+    height: 200px;
+  }
+  
+  .lightbox-nav.prev {
+    left: -1rem;
+  }
+  
+  .lightbox-nav.next {
+    right: -1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .panoramic-banner {
+    height: 150px;
+  }
+  
+  .banner-overlay {
+    padding: 1rem 0.75rem 0.75rem;
+  }
+  
+  .banner-overlay h2 {
+    font-size: 1rem;
+  }
+  
+  .banner-overlay p {
+    font-size: 0.8rem;
+  }
+  
+  .section-title h1 {
+    font-size: 1.75rem;
+  }
+  
+  .filter-bar {
+    padding: 1rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
